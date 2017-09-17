@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_Exes_and_Ohs
@@ -121,9 +122,7 @@ namespace Codewars_Exes_and_Ohs
         public static bool XO(string input)
         {
             input = change(input);
-            if (getXLength(input) == getOLength(input))
-                return true;
-            return false; 
+            return getXLength(input) == getOLength(input);
         }
 
         public static int getXLength(string input)
