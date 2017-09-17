@@ -46,6 +46,7 @@ namespace Codewars_Exes_and_Ohs
 
         public static string change(string input)
         {
+            input = input.ToLower();
             return input;
         }
 
