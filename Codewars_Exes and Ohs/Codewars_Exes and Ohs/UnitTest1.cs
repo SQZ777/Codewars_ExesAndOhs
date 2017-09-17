@@ -55,6 +55,18 @@ namespace Codewars_Exes_and_Ohs
             getXOMethodResult(true, "ox");
         }
 
+        [TestMethod]
+        public void XO_Input_oox_Should_Be_False()
+        {
+            getXOMethodResult(false, "oox");
+        }
+
+        [TestMethod]
+        public void XO_Input_ooxx_Should_Be_False()
+        {
+            getXOMethodResult(true, "ooxx");
+        }
+
         private static void getGetOLengthMethodResult(int expected, string input)
         {
             var actual = Kata.getOLength(input);
