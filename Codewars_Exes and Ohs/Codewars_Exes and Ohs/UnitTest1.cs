@@ -18,6 +18,12 @@ namespace Codewars_Exes_and_Ohs
             getChangeMethodResult("o", "o");
         }
 
+        [TestMethod]
+        public void Input_O_Should_Be_o()
+        {
+            getChangeMethodResult("o","O");
+        }
+
         private static void getXOMethodResult(bool expected, string input)
         {
             var actual = Kata.XO(input);
