@@ -127,12 +127,12 @@ namespace Codewars_Exes_and_Ohs
 
         public static int getXLength(string input)
         {
-            return input.ToCharArray().Count(x => x.Equals('x'));
+            return input.Count(x => x.Equals('x'));
         }
 
         public static int getOLength(string input)
         {
-            return input.ToCharArray().Count(x => x.Equals('o'));
+            return input.Count(x => x.Equals('o'));
         }
 
         public static string change(string input)
