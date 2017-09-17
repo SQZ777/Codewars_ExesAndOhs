@@ -38,10 +38,10 @@ namespace Codewars_Exes_and_Ohs
         }
 
         [TestMethod]
-        public void getXlength_Input_xx_Should_Be_2()
+        public void getXlength_Input_xx_Should_Be_3()
         {
 
-            getGetOLengthMethodResult(3, "xxx");
+            getGetXLengthMethodResult(3, "xxx");
         }
 
         private static void getGetOLengthMethodResult(int expected, string input)
@@ -77,6 +77,11 @@ namespace Codewars_Exes_and_Ohs
             return true;
         }
 
+        public static int getXLength(string input)
+        {
+            return input.ToCharArray().Count(x => x.Equals('x'));
+        }
+
         public static int getOLength(string input)
         {
             return input.ToCharArray().Count(x => x.Equals('o'));
@@ -87,9 +92,6 @@ namespace Codewars_Exes_and_Ohs
             return input.ToLower();
         }
 
-        public static int getXLength(string input)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
