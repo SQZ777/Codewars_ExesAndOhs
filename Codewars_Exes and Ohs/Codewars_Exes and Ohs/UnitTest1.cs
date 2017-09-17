@@ -24,6 +24,12 @@ namespace Codewars_Exes_and_Ohs
             getChangeMethodResult("o","O");
         }
 
+        [TestMethod]
+        public void Input_X_Should_Be_x()
+        {
+            getChangeMethodResult("x","X");
+        }
+
         private static void getXOMethodResult(bool expected, string input)
         {
             var actual = Kata.XO(input);
@@ -46,8 +52,7 @@ namespace Codewars_Exes_and_Ohs
 
         public static string change(string input)
         {
-            input = input.ToLower();
-            return input;
+            return input.ToLower();
         }
 
     }
