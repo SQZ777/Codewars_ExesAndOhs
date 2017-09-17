@@ -21,7 +21,7 @@ namespace Codewars_Exes_and_Ohs
     {
         public static bool XO(string input)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
