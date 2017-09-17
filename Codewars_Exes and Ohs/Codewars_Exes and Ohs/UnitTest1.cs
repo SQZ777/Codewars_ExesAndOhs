@@ -121,9 +121,7 @@ namespace Codewars_Exes_and_Ohs
         public static bool XO(string input)
         {
             input = change(input);
-            var xLength = getXLength(input);
-            var oLength = getOLength(input);
-            if (xLength == oLength)
+            if (getXLength(input) == getOLength(input))
                 return true;
             return false;
         }
@@ -142,7 +140,5 @@ namespace Codewars_Exes_and_Ohs
         {
             return input.ToLower();
         }
-
-        
     }
 }
