@@ -29,7 +29,12 @@ namespace Codewars_Exes_and_Ohs
         {
             getChangeMethodResult("x","X");
         }
-        
+
+        [TestMethod]
+        public void XO_Input_oo_Should_Be_false()
+        {
+            getXOMethodResult(false,"oo");
+        }
 
         private static void getXOMethodResult(bool expected, string input)
         {
