@@ -40,8 +40,19 @@ namespace Codewars_Exes_and_Ohs
         [TestMethod]
         public void getXlength_Input_xx_Should_Be_3()
         {
-
             getGetXLengthMethodResult(3, "xxx");
+        }
+
+        [TestMethod]
+        public void XO_Input_oo_Should_Be_False()
+        {
+            getXOMethodResult(false,"oo");
+        }
+
+        [TestMethod]
+        public void XO_Input_ox_Should_Be_False()
+        {
+            getXOMethodResult(true, "ox");
         }
 
         private static void getGetOLengthMethodResult(int expected, string input)
@@ -73,8 +84,12 @@ namespace Codewars_Exes_and_Ohs
     {
         public static bool XO(string input)
         {
-
-            return true;
+            input = change(input);
+            var xLength = getXLength(input);
+            var oLength = getOLength(input);
+            if (xLength == oLength)
+                return true;
+            return false;
         }
 
         public static int getXLength(string input)
