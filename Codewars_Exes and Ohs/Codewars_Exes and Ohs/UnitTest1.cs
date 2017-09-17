@@ -85,6 +85,12 @@ namespace Codewars_Exes_and_Ohs
             getXOMethodResult(true, "abcxo");
         }
 
+        [TestMethod]
+        public void XO_Input_abcxox_Should_Be_false()
+        {
+            getXOMethodResult(false, "abcxox");
+        }
+
         private static void getGetOLengthMethodResult(int expected, string input)
         {
             var actual = Kata.getOLength(input);
