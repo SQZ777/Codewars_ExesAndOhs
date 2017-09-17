@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_Exes_and_Ohs
@@ -9,7 +10,7 @@ namespace Codewars_Exes_and_Ohs
         [TestMethod]
         public void XOMethod_Input_Null_Should_Be_true()
         {
-            getXOMethodResult(true,string.Empty);
+            getXOMethodResult(true, string.Empty);
         }
 
         [TestMethod]
@@ -21,19 +22,25 @@ namespace Codewars_Exes_and_Ohs
         [TestMethod]
         public void ChangeMethod_Input_O_Should_Be_o()
         {
-            getChangeMethodResult("o","O");
+            getChangeMethodResult("o", "O");
         }
 
         [TestMethod]
         public void ChangeMethod_Input_X_Should_Be_x()
         {
-            getChangeMethodResult("x","X");
+            getChangeMethodResult("x", "X");
         }
 
         [TestMethod]
         public void XO_Input_oo_Should_Be_false()
         {
-            getXOMethodResult(false,"oo");
+            getGetOLengthMethodResult(2, "oo");
+        }
+
+        private static void getGetOLengthMethodResult(int expected, string input)
+        {
+            var actual = Kata.getOLength(input);
+            Assert.AreEqual(expected, actual);
         }
 
         private static void getXOMethodResult(bool expected, string input)
@@ -42,7 +49,7 @@ namespace Codewars_Exes_and_Ohs
             Assert.AreEqual(expected, actual);
         }
 
-        private static void getChangeMethodResult(string expected,string input)
+        private static void getChangeMethodResult(string expected, string input)
         {
             var actual = Kata.change(input);
             Assert.AreEqual(expected, actual);
@@ -53,7 +60,14 @@ namespace Codewars_Exes_and_Ohs
     {
         public static bool XO(string input)
         {
+
             return true;
+        }
+
+        public static int getOLength(string input)
+        {
+            var charArray = input.ToCharArray();
+            return charArray.Count(x => x.Equals('o'));
         }
 
         public static string change(string input)
