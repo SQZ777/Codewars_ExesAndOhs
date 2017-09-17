@@ -123,7 +123,7 @@ namespace Codewars_Exes_and_Ohs
             input = change(input);
             if (getXLength(input) == getOLength(input))
                 return true;
-            return false;
+            return false; 
         }
 
         public static int getXLength(string input)
