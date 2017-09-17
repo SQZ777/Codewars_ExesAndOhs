@@ -7,28 +7,29 @@ namespace Codewars_Exes_and_Ohs
     public class UnitTest1
     {
         [TestMethod]
-        public void Input_Null_Should_Be_true()
+        public void XOMethod_Input_Null_Should_Be_true()
         {
             getXOMethodResult(true,string.Empty);
         }
 
         [TestMethod]
-        public void Input_o_Should_Be_o()
+        public void ChangeMethod_Input_o_Should_Be_o()
         {
             getChangeMethodResult("o", "o");
         }
 
         [TestMethod]
-        public void Input_O_Should_Be_o()
+        public void ChangeMethod_Input_O_Should_Be_o()
         {
             getChangeMethodResult("o","O");
         }
 
         [TestMethod]
-        public void Input_X_Should_Be_x()
+        public void ChangeMethod_Input_X_Should_Be_x()
         {
             getChangeMethodResult("x","X");
         }
+        
 
         private static void getXOMethodResult(bool expected, string input)
         {
