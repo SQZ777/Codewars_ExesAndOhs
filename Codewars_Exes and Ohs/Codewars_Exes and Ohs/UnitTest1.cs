@@ -50,7 +50,7 @@ namespace Codewars_Exes_and_Ohs
         }
 
         [TestMethod]
-        public void XO_Input_ox_Should_Be_False()
+        public void XO_Input_ox_Should_Be_true()
         {
             getXOMethodResult(true, "ox");
         }
@@ -62,9 +62,15 @@ namespace Codewars_Exes_and_Ohs
         }
 
         [TestMethod]
-        public void XO_Input_ooxx_Should_Be_False()
+        public void XO_Input_ooxx_Should_Be_ture()
         {
             getXOMethodResult(true, "ooxx");
+        }
+
+        [TestMethod]
+        public void XO_Input_abc_Should_Be_true()
+        {
+            getXOMethodResult(true,"abc");
         }
 
         private static void getGetOLengthMethodResult(int expected, string input)
