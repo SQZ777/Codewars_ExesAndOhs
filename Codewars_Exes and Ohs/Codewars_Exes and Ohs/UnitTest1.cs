@@ -9,24 +9,26 @@ namespace Codewars_Exes_and_Ohs
         [TestMethod]
         public void Input_Null_Should_Be_true()
         {
-            //arrange
-            var input = string.Empty;
-            //act
-            var actual = Kata.XO(input);
-            //assert
-            var expected = true;
-            Assert.AreEqual(expected,actual);
+            getXOMethodResult(true,string.Empty);
         }
 
         [TestMethod]
         public void Input_o_Should_Be_o()
         {
-            var input = "o";
-            var actual = Kata.change(input);
-            var expected = "o";
-            Assert.AreEqual(expected,actual);
+            getChangeMethodResult("o", "o");
         }
 
+        private static void getXOMethodResult(bool expected, string input)
+        {
+            var actual = Kata.XO(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        private static void getChangeMethodResult(string expected,string input)
+        {
+            var actual = Kata.change(input);
+            Assert.AreEqual(expected, actual);
+        }
     }
 
     public class Kata
