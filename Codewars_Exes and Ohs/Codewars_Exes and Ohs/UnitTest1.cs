@@ -32,14 +32,27 @@ namespace Codewars_Exes_and_Ohs
         }
 
         [TestMethod]
-        public void XO_Input_oo_Should_Be_false()
+        public void getOlength_Input_oo_Should_Be_2()
         {
             getGetOLengthMethodResult(2, "oo");
+        }
+
+        [TestMethod]
+        public void getXlength_Input_xx_Should_Be_2()
+        {
+
+            getGetOLengthMethodResult(3, "xxx");
         }
 
         private static void getGetOLengthMethodResult(int expected, string input)
         {
             var actual = Kata.getOLength(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        private static void getGetXLengthMethodResult(int expected, string input)
+        {
+            var actual = Kata.getXLength(input);
             Assert.AreEqual(expected, actual);
         }
 
@@ -74,5 +87,9 @@ namespace Codewars_Exes_and_Ohs
             return input.ToLower();
         }
 
+        public static int getXLength(string input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
