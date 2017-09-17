@@ -66,8 +66,7 @@ namespace Codewars_Exes_and_Ohs
 
         public static int getOLength(string input)
         {
-            var charArray = input.ToCharArray();
-            return charArray.Count(x => x.Equals('o'));
+            return input.ToCharArray().Count(x => x.Equals('o'));
         }
 
         public static string change(string input)
