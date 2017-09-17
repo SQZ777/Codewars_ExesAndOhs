@@ -14,7 +14,19 @@ namespace Codewars_Exes_and_Ohs
             //act
             var actual = Kata.XO(input);
             //assert
+            var expected = true;
+            Assert.AreEqual(expected,actual);
         }
+
+        [TestMethod]
+        public void Input_o_Should_Be_o()
+        {
+            var input = "o";
+            var actual = Kata.change(input);
+            var expected = "o";
+            Assert.AreEqual(expected,actual);
+        }
+
     }
 
     public class Kata
@@ -23,5 +35,11 @@ namespace Codewars_Exes_and_Ohs
         {
             return true;
         }
+
+        public static string change(string input)
+        {
+            return input;
+        }
+
     }
 }
